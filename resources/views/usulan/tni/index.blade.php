@@ -59,7 +59,7 @@
                                             <span class="text-success">Lolos Verifikasi</span>
                                             @endif
                                             @if($row['status_usulan'] == 'SELESAI')
-                                            <span class="text-success">Selesai</span>
+                                            <span class="text-success">Terbit</span>
                                             @endif
                                         </td>
                                         <td class="align-middle text-center">

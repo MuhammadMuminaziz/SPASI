@@ -36,7 +36,7 @@
                                 @foreach ($pns as $row)
                                     <tr>
                                         <td class="align-middle">{{ $loop->iteration }}</td>
-                                        <td class="align-middle">{{ $row->jabatan->name }}</td>
+                                        <td class="align-middle">{{ $row->jabatan->name ?? '-' }}</td>
                                         <td class="align-middle">{{ $row->nip }}</td>
                                         <td class="align-middle">{{ $row->nama }}</td>
                                         <td class="align-middle">{{ $row->tgl_lahir }}</td>

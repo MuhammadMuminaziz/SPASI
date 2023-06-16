@@ -25,7 +25,7 @@ class Pns extends Model
             $tgl = date('Y-m-d', strtotime('+57 years', strtotime($row->tgl_lahir)));
             if ($tgl <= date('Y-m-d')) {
                 $data[$i]['slug'] = $row->slug;
-                $data[$i]['jabatan'] = $row->jabatan->name;
+                $data[$i]['jabatan'] = $row->jabatan->name ?? '-';
                 $data[$i]['nip'] = $row->nip;
                 $data[$i]['nama'] = $row->nama;
                 $data[$i]['pangkat'] = $row->pangkat;

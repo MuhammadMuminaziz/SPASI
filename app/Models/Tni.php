@@ -29,8 +29,8 @@ class Tni extends Model
             }
             if ($tgl <= date('Y-m-d')) {
                 $data[$i]['slug'] = $row->slug;
-                $data[$i]['kesatuan'] = $row->kesatuan->name;
-                $data[$i]['jabatan'] = $row->jabatan->name;
+                $data[$i]['kesatuan'] = $row->kesatuan->name ?? '-';
+                $data[$i]['jabatan'] = $row->jabatan->name ?? '-';
                 $data[$i]['gol_jab'] = $row->gol_jab;
                 $data[$i]['nama'] = $row->nama;
                 $data[$i]['pangkat'] = $row->pangkat;

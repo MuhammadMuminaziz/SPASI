@@ -14,7 +14,7 @@ class PnsController extends Controller
      */
     public function index()
     {
-        $pns = Pns::orderBy('nama', 'asc')->get();
+        $pns = Pns::where('kesatuan_id', auth()->user()->kesatuan_id)->orderBy('nama', 'asc')->get();
         return view('pns.index', compact('pns'));
     }
 

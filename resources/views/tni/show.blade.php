@@ -22,11 +22,11 @@
                                     <table class="w-100">
                                         <tr>
                                             <td width="60%">Kesatuan</td>
-                                            <td class="text-primary">{{ $tni->kesatuan->name }}</td>
+                                            <td class="text-primary">{{ $tni->kesatuan->name ?? '-' }}</td>
                                         </tr>
                                         <tr>
                                             <td>Jabatan</td>
-                                            <td class="text-primary">{{ $tni->jabatan->name }}</td>
+                                            <td class="text-primary">{{ $tni->jabatan->name ?? '-' }}</td>
                                         </tr>
                                         <tr>
                                             <td>Gol Jabatan</td>

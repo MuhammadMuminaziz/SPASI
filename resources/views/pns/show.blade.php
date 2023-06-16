@@ -20,7 +20,7 @@
                             <table class="w-100">
                                 <tr>
                                     <td>Jabatan</td>
-                                    <td class="text-primary">{{ $pns->jabatan->name }}</td>
+                                    <td class="text-primary">{{ $pns->jabatan->name ?? '-' }}</td>
                                 </tr>
                                 <tr>
                                     <td>NIP</td>

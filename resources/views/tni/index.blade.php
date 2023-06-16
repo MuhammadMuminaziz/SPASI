@@ -38,8 +38,8 @@
                                 @foreach ($tni as $row)
                                     <tr>
                                         <td class="align-middle">{{ $loop->iteration }}</td>
-                                        <td class="align-middle">{{ $row->kesatuan->name }}</td>
-                                        <td class="align-middle">{{ $row->jabatan->name }}</td>
+                                        <td class="align-middle">{{ $row->kesatuan->name ?? '-' }}</td>
+                                        <td class="align-middle">{{ $row->jabatan->name ?? '-' }}</td>
                                         <td class="align-middle">{{ $row->gol_jab }}</td>
                                         <td class="align-middle">{{ $row->nama }}</td>
                                         <td class="align-middle">{{ $row->pangkat }}</td>

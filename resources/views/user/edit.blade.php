@@ -72,10 +72,12 @@
                                 <div class="form-group {{ $user->role_id == 3 ? '' : 'd-none' }}" id="kesatuan">
                                     <label>Kesatuan <span class="text-danger">*</span></label>
                                     <select class="form-control selectric" name="kesatuan_id">
+                                        @if($user->kesatuan != null)
                                         <option value="{{ $user->kesatuan->id }}" {{ $user->kesatuan->id == old('kesatuan_id', $user->kesatuan->id) ? 'selected' : '' }}>{{ $user->kesatuan->name }}</option>
                                         @foreach($kesatuan as $row)
                                         <option value="{{ $row->id }}" {{ $row->id == old('kesatuan_id', $user->kesatuan->id) ? 'selected' : '' }}>{{ $row->name }}</option>
                                         @endforeach
+                                        @endif
                                     </select>
                                 </div>
                                 <small class="form-text text-muted mb-0">

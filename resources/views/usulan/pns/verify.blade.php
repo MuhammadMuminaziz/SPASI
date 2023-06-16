@@ -27,7 +27,7 @@
                                     <tr>
                                         <td>Jabatan</td>
                                         <td>:</td>
-                                        <td class="text-primary">{{ $pns->jabatan->name }}</td>
+                                        <td class="text-primary">{{ $pns->jabatan->name ?? '-' }}</td>
                                     </tr>
                                     <tr>
                                         <td width="30%">Nama</td>
