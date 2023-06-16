@@ -1,0 +1,19 @@
+.logout:focus{
+    border: none;
+    outline: none;
+    color: white !important;
+}
+
+.text-line{
+    line-height: normal;
+}
+
+.login-container{
+    margin-top: -250px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .login-container{
+        margin-top: 0;
+    }
+}
