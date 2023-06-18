@@ -49,7 +49,7 @@
                                             <label>Status <span class="text-danger">*</span></label>
                                             <select class="form-control selectric" name="status">
                                                 <option value="Perwira">Perwira</option>
-                                                <option value="Tamtama">Tamtama</option>
+                                                <option value="Non Perwira">Non Perwira</option>
                                             </select>
                                         </div>
                                         <div class="form-group">

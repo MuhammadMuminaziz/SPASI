@@ -14,10 +14,10 @@ class Tni extends Model
     public function scopeUsulan(): array
     {
         $user = auth()->user();
-        if ($user->role->name == 'Verifikator') {
-            $countTni = Tni::where('is_usulan', true)->get();
-        } else {
+        if ($user->role->name == 'Operator') {
             $countTni = Tni::where('kesatuan_id', $user->kesatuan->id)->get();
+        } else {
+            $countTni = Tni::where('is_usulan', true)->get();
         }
         $data = [];
         $i = 0;

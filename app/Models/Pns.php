@@ -14,10 +14,10 @@ class Pns extends Model
     public function scopeUsulan(): array
     {
         $user = auth()->user();
-        if ($user->role->name == 'Verifikator') {
-            $countPns = Pns::where('is_usulan', true)->get();
-        } else {
+        if ($user->role->name == 'Operator') {
             $countPns = Pns::where('kesatuan_id', $user->kesatuan->id)->get();
+        } else {
+            $countPns = Pns::where('is_usulan', true)->get();
         }
         $data = [];
         $i = 0;

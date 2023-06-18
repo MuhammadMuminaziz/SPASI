@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FilterController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\KesatuanController;
 use App\Http\Controllers\PnsController;
@@ -50,6 +51,8 @@ Route::middleware('auth')->group(function () {
     Route::post('usulan-pns/store', [UsulanPnsController::class, 'store'])->name('usulan-pns.store');
     Route::post('usulan-pns/{id}/update', [UsulanPnsController::class, 'update'])->name('usulan-pns.update');
     Route::post('usulan-pns/upload', [UploadController::class, 'skPns'])->name('usulan-pns.upload');
+
+    Route::post('filter', [FilterController::class, 'index'])->name('filter');
 });
 
 Route::middleware('admin')->group(function () {

@@ -12,8 +12,8 @@
         
         @if (auth()->user()->role->name === 'Super Admin')
             <li class="menu-header">Managemen</li>
-            <li class="{{ request()->is('kesatuan*') ? 'active' : '' }}"><a href="{{ route('kesatuan.index') }}" class="nav-link"><i class="fas fa-code-branch"></i></i><span>Kesatuan</span></a></li>
-            <li class="{{ request()->is('jabatan*') ? 'active' : '' }}"><a href="{{ route('jabatan.index') }}" class="nav-link"><i class="fas fa-star"></i></i><span>Nama Jabatan</span></a></li>
+            <li class="{{ request()->is('kesatuan*') ? 'active' : '' }}"><a href="{{ route('kesatuan.index') }}" class="nav-link"><i class="fas fa-code-branch"></i><span>Kesatuan</span></a></li>
+            <li class="{{ request()->is('jabatan*') ? 'active' : '' }}"><a href="{{ route('jabatan.index') }}" class="nav-link"><i class="fas fa-star"></i><span>Nama Jabatan</span></a></li>
             <li class="{{ request()->is('users*') ? 'active' : '' }}"><a href="{{ route('users.index') }}" class="nav-link"><i class="fas fa-users-cog"></i><span>User Kesatuan</span></a></li>
         @endif
         

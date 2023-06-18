@@ -14,7 +14,7 @@ class TniController extends Controller
      */
     public function index()
     {
-        $tni = Tni::orderBy('nama', 'asc')->get();
+        $tni = Tni::where('kesatuan_id', auth()->user()->kesatuan_id)->orderBy('nama', 'asc')->get();
         return view('tni.index', compact('tni'));
     }
 

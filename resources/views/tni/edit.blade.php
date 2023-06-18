@@ -59,7 +59,7 @@
                                             <label>Status <span class="text-danger">*</span></label>
                                             <select class="form-control selectric" name="status">
                                                 <option value="Perwira" {{ $tni->status == 'Perwira' ? 'selected' : '' }}>Perwira</option>
-                                                <option value="Tamtama" {{ $tni->status == 'Tamtama' ? 'selected' : '' }}>Tamtama</option>
+                                                <option value="Non Perwira" {{ $tni->status == 'Non Perwira' ? 'selected' : '' }}>Non Perwira</option>
                                             </select>
                                         </div>
                                         <div class="form-group">

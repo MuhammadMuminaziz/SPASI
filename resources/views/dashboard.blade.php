@@ -8,7 +8,21 @@
         </div>
 
         <div class="section-body">
-            <h1>Dashboard</h1>
+            <div class="row">
+
+                @if($user->role->name === 'Super Admin')
+                @include('dashboard.admin')
+                @endif
+
+                @if($user->role->name === 'Verifikator')
+                @include('dashboard.verifikator')
+                @endif
+
+                @if($user->role->name === 'Operator')
+                @include('dashboard.operator')
+                @endif
+                
+            </div>
         </div>
     </section>
 </x-app-layout>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kesatuan;
 use App\Models\NoteTni;
 use App\Models\Pns;
 use App\Models\Tni;
@@ -14,7 +15,8 @@ class UsulanController extends Controller
     public function tni()
     {
         $tni = Tni::usulan();
-        return view('usulan.tni.index', compact('tni'));
+        $kesatuan = Kesatuan::orderBy('name', 'asc')->get();
+        return view('usulan.tni.index', compact('tni', 'kesatuan'));
     }
 
     public function create($slug)
