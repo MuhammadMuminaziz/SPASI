@@ -161,7 +161,7 @@
             <i class="fas fa-file-pdf"></i>
             </div>
             <h4>{{ $pns->whereNotNull('surat_sk_id')->count() }}</h4>
-            <div class="card-description">SK Pensiun PNS Terbit</div>
+            <div class="card-description">SK Pensiun PNS Terbit</div>   
         </div>
         <div class="card-body p-0">
             <div class="tickets-list">
